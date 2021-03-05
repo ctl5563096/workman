@@ -41,7 +41,7 @@ class Events
     {
         var_export($data);
         if (!isset($data['get']['token'])) {
-            $message = '{"type":"say_to_one","to_client_id":'. $client_id .',"content":"hello"}';
+            $message = '{"type":"onConnect","to_client_id":"'. $client_id .'","content":"连接成功"}';
             Gateway::sendToClient($client_id, $message);
         }
     }
@@ -67,13 +67,13 @@ class Events
     */
    public static function onMessage($client_id, $message)
    {
-       $req_data = json_decode($message, true);
-       // 如果是向某个客户端发送消息
-       if($req_data['type'] == 'say_to_one')
-       {
-           // 转发消息给对应的客户端
-           Gateway::sendToClient($req_data['to_client_id'], $req_data['content']);
-       }
+//       $req_data = json_decode($message, true);
+//       // 如果是向某个客户端发送消息
+//       if($req_data['type'] == 'say_to_one')
+//       {
+//           // 转发消息给对应的客户端
+//           Gateway::sendToClient($req_data['to_client_id'], $req_data['content']);
+//       }
    }
    
    /**
