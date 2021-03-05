@@ -28,26 +28,37 @@ use \GatewayWorker\Lib\Gateway;
  */
 class Events
 {
+    /**
+     * Notes: websocket握手连接
+     *
+     * Author: chentulin
+     * DateTime: 2021/3/5 22:55
+     * E-MAIL: <chentulinys@163.com>
+     * @param $client_id
+     * @param $data
+     */
     public static function onWebSocketConnect($client_id, $data)
     {
         var_export($data);
         if (!isset($data['get']['token'])) {
-            Gateway::closeClient($client_id);
+            $message = '{"type":"say_to_one","to_client_id":'. $client_id .',"content":"hello"}';
+            Gateway::sendToClient($client_id, $message);
         }
     }
+
     /**
      * 当客户端连接时触发
      * 如果业务不需此回调可以删除onConnect
      * 
      * @param int $client_id 连接id
      */
-    public static function onConnect($client_id)
-    {
-        // 向当前client_id发送数据 
-        Gateway::sendToClient($client_id, "Hello $client_id\r\n");
-        // 向所有人发送
-        Gateway::sendToAll("$client_id login\r\n");
-    }
+//    public static function onConnect($client_id)
+//    {
+//        // 向当前client_id发送数据
+//        Gateway::sendToClient($client_id, "Hello $client_id\r\n");
+//        // 向所有人发送
+//        Gateway::sendToAll("$client_id login\r\n");
+//    }
     
    /**
     * 当客户端发来消息时触发
@@ -56,8 +67,13 @@ class Events
     */
    public static function onMessage($client_id, $message)
    {
-        // 向所有人发送 
-        Gateway::sendToAll("$client_id said $message\r\n");
+       $req_data = json_decode($message, true);
+       // 如果是向某个客户端发送消息
+       if($req_data['type'] == 'say_to_one')
+       {
+           // 转发消息给对应的客户端
+           Gateway::sendToClient($req_data['to_client_id'], $req_data['content']);
+       }
    }
    
    /**
