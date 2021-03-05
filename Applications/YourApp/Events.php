@@ -28,6 +28,13 @@ use \GatewayWorker\Lib\Gateway;
  */
 class Events
 {
+    public static function onWebSocketConnect($client_id, $data)
+    {
+        var_export($data);
+        if (!isset($data['get']['token'])) {
+            Gateway::closeClient($client_id);
+        }
+    }
     /**
      * 当客户端连接时触发
      * 如果业务不需此回调可以删除onConnect
