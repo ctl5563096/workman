@@ -67,6 +67,7 @@ class Events
     */
    public static function onMessage($client_id, $message)
    {
+       var_export($message);
 //       $req_data = json_decode($message, true);
 //       // 如果是向某个客户端发送消息
 //       if($req_data['type'] == 'say_to_one')
