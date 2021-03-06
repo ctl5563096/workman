@@ -72,7 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1614954207366</updated>
       <workItem from="1614954208440" duration="6506000" />
-      <workItem from="1614993702050" duration="3034000" />
+      <workItem from="1614993702050" duration="4952000" />
     </task>
     <task id="LOCAL-00001" summary="feat:修改域名地址">
       <created>1614955460036</created>
@@ -186,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614999050231</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="feat:修改域名地址">
+      <created>1614999151609</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1614999151609</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,9 +216,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="feat:修改域名地址" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="456" y="178" key="Vcs.Push.Dialog.v2" timestamp="1614999053603">
+    <state x="456" y="178" key="Vcs.Push.Dialog.v2" timestamp="1614999153909">
       <screen x="0" y="0" width="1728" height="892" />
     </state>
-    <state x="456" y="178" key="Vcs.Push.Dialog.v2/0.0.1728.892@0.0.1728.892" timestamp="1614999053603" />
+    <state x="456" y="178" key="Vcs.Push.Dialog.v2/0.0.1728.892@0.0.1728.892" timestamp="1614999153909" />
   </component>
 </project>
