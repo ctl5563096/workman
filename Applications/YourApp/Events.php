@@ -68,13 +68,13 @@ class Events
    public static function onMessage($client_id, $message)
    {
        var_export($message);
-//       $req_data = json_decode($message, true);
-//       // 如果是向某个客户端发送消息
-//       if($req_data['type'] == 'say_to_one')
-//       {
-//           // 转发消息给对应的客户端
-//           Gateway::sendToClient($req_data['to_client_id'], $req_data['content']);
-//       }
+       $req_data = json_decode($message, true);
+       // 如果是向某个客户端发送消息
+       if($req_data['type'] == 'onClose')
+       {
+           // 转发消息给对应的客户端
+           Gateway::sendToClient($req_data['to_client_id'], $req_data['content']);
+       }
    }
    
    /**
