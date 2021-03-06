@@ -69,6 +69,7 @@ class Events
    {
        var_export($message. '客户端id' . $client_id);
        $req_data = json_decode($message, true);
+       var_dump($req_data);die();
        Gateway::sendToClient($client_id, $req_data['content']);
 //       var_export($req_data);
        // 如果是向某个客户端发送消息
