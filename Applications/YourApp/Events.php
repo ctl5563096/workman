@@ -69,6 +69,7 @@ class Events
    {
        var_export($message);
        $req_data = json_decode($message, true);
+       var_export($req_data);
        // 如果是向某个客户端发送消息
        if($req_data['type'] == 'onClose')
        {
