@@ -83,7 +83,7 @@ class Events
     */
    public static function onClose($client_id)
    {
-       // 向所有人发送 
-       GateWay::sendToAll("$client_id logout\r\n");
+       $message = '{"type":"onClose","to_client_id":"'. $client_id .'","content":"退出登录"}';
+       Gateway::sendToClient($client_id, $message);
    }
 }
