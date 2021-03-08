@@ -67,8 +67,7 @@ class Events
    {
        $arr = GatewayProtocol::decode($message);
        $data = json_decode($arr['body']);
-       $array = json_decode(json_encode(simplexml_load_string($data)),TRUE);
-       var_export($array);die();
+       var_export($data->to_client_id);die();
 
        $arr=array();
        foreach ($temp as $k => $v) {
