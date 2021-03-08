@@ -72,7 +72,7 @@ class Events
        var_export($data);
        var_export($data->type);
        // 如果是向某个客户端发送消息
-       if($data->type === 'onClose')
+       if($data->type === 'CI_Client')
        {
            var_export(11111111111);
            Gateway::sendToClient($data->to_client_id,$data->content);
