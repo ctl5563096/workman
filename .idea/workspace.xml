@@ -20,9 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87355f44-30c8-405b-98da-efec3fd63295" name="Default Changelist" comment="feat:修改域名地址">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Applications/YourApp/Events.php" beforeDir="false" afterPath="$PROJECT_DIR$/Applications/YourApp/Events.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/workerman/gateway-worker/src/Protocols/GatewayProtocol.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/workerman/gateway-worker/src/Protocols/GatewayProtocol.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1614954207366</updated>
       <workItem from="1614954208440" duration="6506000" />
-      <workItem from="1614993702050" duration="19736000" />
+      <workItem from="1614993702050" duration="19928000" />
     </task>
     <task id="LOCAL-00001" summary="feat:修改域名地址">
       <created>1614955460036</created>
@@ -313,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615187924894</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="feat:修改域名地址">
+      <created>1615188520790</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1615188520790</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -348,9 +353,9 @@
       <screen x="0" y="0" width="1728" height="892" />
     </state>
     <state x="669" y="146" key="RollbackChangesDialog/0.0.1728.892@0.0.1728.892" timestamp="1615183564017" />
-    <state x="456" y="178" key="Vcs.Push.Dialog.v2" timestamp="1615187926582">
+    <state x="456" y="178" key="Vcs.Push.Dialog.v2" timestamp="1615188524870">
       <screen x="0" y="0" width="1728" height="892" />
     </state>
-    <state x="456" y="178" key="Vcs.Push.Dialog.v2/0.0.1728.892@0.0.1728.892" timestamp="1615187926582" />
+    <state x="456" y="178" key="Vcs.Push.Dialog.v2/0.0.1728.892@0.0.1728.892" timestamp="1615188524870" />
   </component>
 </project>
