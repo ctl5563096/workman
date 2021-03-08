@@ -20,6 +20,7 @@
 //declare(ticks=1);
 
 use \GatewayWorker\Lib\Gateway;
+use Protocols\GatewayProtocol;
 
 /**
  * 主逻辑
@@ -64,10 +65,12 @@ class Events
     */
    public static function onMessage($client_id, $message)
    {
+       var_export(GatewayProtocol::decode($message));
        $arr = explode('"\0"',$message);
 //       var_export($message. '客户端id' . $client_id);
 //       $req_data = json_decode($message, true);
        var_export($arr);die();
+
        Gateway::sendToClient($client_id, $req_data['content']);
 //       var_export($req_data);
        // 如果是向某个客户端发送消息
