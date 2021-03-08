@@ -69,7 +69,7 @@ class Events
        $arr = GatewayProtocol::decode($message);
        // 转化
        $data = json_decode($arr['body']);
-
+       var_export($data);
        // 如果是向某个客户端发送消息
        if($data->type === 'onClose')
        {
