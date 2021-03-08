@@ -79,8 +79,7 @@ class Events
            var_export($dataArr);
            var_export($dataArr['to_client_id']);
            var_export($dataArr['content']);
-           die();
-           Gateway::sendToClient($dataArr['to_client_id'],$dataArr['content']);
+           Gateway::sendToAll($dataArr['content']);
        }
    }
    
