@@ -69,8 +69,9 @@ class Events
        $arr = GatewayProtocol::decode($message);
        // 转化
        $data = json_decode($arr['body']);
-       var_export($data);
-       var_export($data->type);
+
+       $dataArr = GatewayProtocol::object_array($data);
+       var_export($dataArr);die();
        // 如果是向某个客户端发送消息
        if($data->type === 'CI_Client')
        {
@@ -88,4 +89,5 @@ class Events
        $message = '{"type":"onClose","to_client_id":"'. $client_id .'","content":"退出登录"}';
        Gateway::sendToClient($client_id, $message);
    }
+
 }
