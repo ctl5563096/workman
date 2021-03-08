@@ -74,12 +74,12 @@ class Events
        }
        $dataArr = GatewayProtocol::object_array($data);
        // 如果是向某个客户端发送消息
-       if(isset($dataArr['type']) && $dataArr['type'] === 'CI_Client')
+       if(isset($dataArr['type']) && $dataArr['type'] === 'onClose')
        {
            var_export($dataArr);
            var_export($dataArr['to_client_id']);
            var_export($dataArr['content']);
-           Gateway::sendToAll($dataArr['content']);
+           Gateway::sendToClient($dataArr['to_client_id'],$dataArr['content']);
        }
    }
    
