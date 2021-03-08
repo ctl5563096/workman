@@ -67,14 +67,7 @@ class Events
    {
        $arr = GatewayProtocol::decode($message);
        $data = json_decode($arr['body']);
-       var_export($data->to_client_id);die();
-
-       $arr=array();
-       foreach ($temp as $k => $v) {
-           $v = (is_array($v) || is_object($v)) ? objectToArray($v) : $v;
-           $arr[$k] = $v;
-       }
-       Gateway::sendToClient($data['to_client_id'], $data['content']);
+       Gateway::sendToClient($data->to_client_id,$data->content);
        die();
 //       var_export($req_data);
        // 如果是向某个客户端发送消息
