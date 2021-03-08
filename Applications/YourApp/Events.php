@@ -65,11 +65,9 @@ class Events
     */
    public static function onMessage($client_id, $message)
    {
-       var_export(GatewayProtocol::decode($message));
-       $arr = explode('"\0"',$message);
-//       var_export($message. '客户端id' . $client_id);
-//       $req_data = json_decode($message, true);
-       var_export($arr);die();
+       $arr = GatewayProtocol::decode($message);
+       $data = json_decode($arr['body']);
+       var_export($data);die();
 
        Gateway::sendToClient($client_id, $req_data['content']);
 //       var_export($req_data);
