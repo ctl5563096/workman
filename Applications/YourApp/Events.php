@@ -76,7 +76,6 @@ class Events
        // 如果是向某个客户端发送消息
        if(isset($dataArr['type']) && $dataArr['type'] === 'CI_Client')
        {
-           var_export(1111111111);die();
            Gateway::sendToClient($dataArr['to_client_id'],$dataArr['content']);
        }
    }
