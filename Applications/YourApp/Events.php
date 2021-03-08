@@ -64,7 +64,7 @@ class Events
     */
    public static function onMessage($client_id, $message)
    {
-       $arr = explode('.',$message);
+       $arr = explode('"\0"',$message);
 //       var_export($message. '客户端id' . $client_id);
 //       $req_data = json_decode($message, true);
        var_export($arr);die();
