@@ -39,11 +39,8 @@ class Events
      */
     public static function onWebSocketConnect($client_id, $data)
     {
-//        var_export($data);
-        if (!isset($data['get']['token'])) {
-            $message = '{"type":"onConnect","to_client_id":"'. $client_id .'","content":"连接成功"}';
-            Gateway::sendToClient($client_id, $message);
-        }
+        $message = '{"type":"onConnect","to_client_id":"'. $client_id .'","content":"连接成功"}';
+        Gateway::sendToClient($client_id, $message);
     }
 
     /**
