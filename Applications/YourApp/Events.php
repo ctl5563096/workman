@@ -67,13 +67,13 @@ class Events
    {
        // CI过来进行解码
        $arr = GatewayProtocol::decode($message);
-       var_export($arr);die();
        // 转化
        $data = json_decode($arr['body']);
        if (!$data){
            return;
        }
        $dataArr = GatewayProtocol::object_array($data);
+       var_export($dataArr);die();
        // 如果是向某个客户端发送消息
        if(isset($dataArr['type']) && $dataArr['type'] === 'CI_Client')
        {
