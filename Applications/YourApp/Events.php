@@ -71,6 +71,7 @@ class Events
        $data = json_decode($arr['body']);
 
        $dataArr = GatewayProtocol::object_array($data);
+       var_export($dataArr['type']);die();
        // 如果是向某个客户端发送消息
        if(isset($dataArr['type']) && $dataArr['type'] === 'CI_Client')
        {
