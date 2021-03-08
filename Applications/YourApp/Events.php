@@ -65,16 +65,15 @@ class Events
     */
    public static function onMessage($client_id, $message)
    {
+       // CI过来进行解码
        $arr = GatewayProtocol::decode($message);
+       // 转化
        $data = json_decode($arr['body']);
-       Gateway::sendToClient($data->to_client_id,$data->content);
-       die();
-//       var_export($req_data);
+
        // 如果是向某个客户端发送消息
-       if($req_data['type'] == 'onClose')
+       if($data->type === 'onClose')
        {
-           // 转发消息给对应的客户端
-           Gateway::sendToClient($client_id, $req_data['content']);
+           Gateway::sendToClient($data->to_client_id,$data->content);
        }
    }
    
